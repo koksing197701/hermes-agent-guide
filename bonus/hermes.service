@@ -1,0 +1,19 @@
+[Unit]
+Description=Hermes AI Agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=agentuser
+WorkingDirectory=/home/agentuser
+ExecStart=/home/agentuser/.hermes/hermes-agent/venv/bin/hermes
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+Environment="PATH=/home/agentuser/.hermes/hermes-agent/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Environment="HOME=/home/agentuser"
+
+[Install]
+WantedBy=multi-user.target

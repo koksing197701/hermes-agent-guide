@@ -1,0 +1,112 @@
+# Hermes Agent — Cron Job Recipe Templates
+# Copy the ones you want and add to config.yaml under cron.jobs
+
+# ═══════════════════════════════════════════
+# 1. MORNING BRIEFING — Daily at 8 AM
+# Sends news, weather, and server status to your chat
+# ═══════════════════════════════════════════
+# schedule: "0 8 * * *"
+# prompt: >
+#   Give me a morning briefing:
+#   1. Top 3 news headlines from Hacker News
+#   2. Server status (uptime, disk, memory)
+#   3. Any pending system updates
+# deliver: weixin
+
+# ═══════════════════════════════════════════
+# 2. SERVER HEALTH CHECK — Every 30 minutes
+# Monitors disk usage, memory, and uptime
+# ═══════════════════════════════════════════
+# schedule: "*/30 * * * *"
+# prompt: >
+#   Check server health:
+#   - Run 'df -h' for disk usage
+#   - Run 'free -h' for memory
+#   - Run 'uptime' for load
+#   If disk > 80% or free memory < 500MB, send an ALERT.
+#   Otherwise, only report if anything changed since last check.
+# deliver: telegram
+
+# ═══════════════════════════════════════════
+# 3. CRYPTO PRICE CHECK — Every 4 hours
+# Monitors BTC and ETH prices
+# ═══════════════════════════════════════════
+# schedule: "0 */4 * * *"
+# prompt: >
+#   Check current BTC and ETH prices from CoinGecko API.
+#   Compare to the previous day. Highlight any change > 5%.
+#   Format: "BTC: $XX,XXX (+X%) | ETH: $X,XXX (+X%)"
+# deliver: telegram
+
+# ═══════════════════════════════════════════
+# 4. WEEKLY DIGEST — Every Monday at 9 AM
+# Summarizes the week's activity
+# ═══════════════════════════════════════════
+# schedule: "0 9 * * 1"
+# prompt: >
+#   Give me a weekly digest:
+#   - Summarize the top 5 tech news stories from this week
+#   - Any notable GitHub releases
+#   - Server stats (average load, uptime since last Monday)
+# deliver: weixin
+
+# ═══════════════════════════════════════════
+# 5. WEBSITE CHANGE MONITOR — Every 6 hours
+# Detects changes to a specific webpage
+# ═══════════════════════════════════════════
+# schedule: "0 */6 * * *"
+# prompt: >
+#   Fetch https://example.com/pricing and compare it
+#   to the version you saw last time. If there are
+#   significant changes, summarize them.
+# deliver: telegram
+
+# ═══════════════════════════════════════════
+# 6. DAILY COMMIT DIGEST — End of day
+# Summarizes Git activity in a repo
+# ═══════════════════════════════════════════
+# schedule: "0 18 * * *"
+# prompt: >
+#   Go to /home/agentuser/my-project and run 'git log --since=yesterday --oneline'.
+#   Summarize the commits: what was changed and by whom.
+# deliver: telegram
+
+# ═══════════════════════════════════════════
+# 7. UNATTENDED UPGRADES CHECK — Daily
+# Checks if system updates installed successfully
+# ═══════════════════════════════════════════
+# schedule: "0 6 * * *"
+# prompt: >
+#   Check the unattended-upgrades log at /var/log/unattended-upgrades/
+#   for any failed or held-back packages. Report only if there are issues.
+# deliver: telegram
+
+# ═══════════════════════════════════════════
+# 8. BEDTIME RECAP — Every night at 10 PM
+# End-of-day summary
+# ═══════════════════════════════════════════
+# schedule: "0 22 * * *"
+# prompt: >
+#   Give me a quick end-of-day recap:
+#   1. Any server alerts from today
+#   2. Any cron jobs that failed
+#   3. One interesting thing you learned today
+# deliver: weixin
+
+# ═══════════════════════════════════════════
+# CRON SCHEDULE CHEAT SHEET
+# ═══════════════════════════════════════════
+# ┌───────── minute (0-59)
+# │ ┌───────── hour (0-23)
+# │ │ ┌───────── day of month (1-31)
+# │ │ │ ┌───────── month (1-12)
+# │ │ │ │ ┌───────── day of week (0-7, 0=Sun)
+# │ │ │ │ │
+# * * * * *
+#
+# Every 30 min:  */30 * * * *
+# Every hour:    0 * * * *
+# Daily 8am:     0 8 * * *
+# Weekdays 9am:  0 9 * * 1-5
+# Mondays 9am:   0 9 * * 1
+# Monthly:       0 0 1 * *

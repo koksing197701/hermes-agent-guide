@@ -1,0 +1,59 @@
+# Hermes Agent — Sample config.yaml
+# Copy this to ~/.hermes/config.yaml and customize
+
+# ── Main Provider ──
+provider: openrouter
+model: openrouter/anthropic/claude-sonnet-4
+
+# ── Providers ──
+providers:
+  openrouter:
+    api_key: "${OPENROUTER_API_KEY}"
+  gemini:
+    api_key: "${GEMINI_API_KEY}"
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+  anthropic:
+    api_key: "${ANTHROPIC_API_KEY}"
+
+# ── Skills ──
+skills:
+  enabled: true
+
+# ── Tools ──
+tools:
+  enabled:
+    - terminal
+    - file
+    - web_search
+    - memory
+    - skills
+    - cronjob
+
+# ── Platforms ──
+platforms:
+  console:
+    enabled: true
+  weixin:
+    enabled: false
+    # app_id: wx_xxxxxxxxxxxxx
+    # app_secret: "${WECHAT_APP_SECRET}"
+    # token: your_wechat_token
+  telegram:
+    enabled: false
+    # bot_token: "${TELEGRAM_BOT_TOKEN}"
+    # allowed_chat_ids:
+    #   - 123456789
+
+# ── Cron Jobs (Examples) ──
+cron:
+  jobs:
+    server_health:
+      schedule: "*/30 * * * *"
+      prompt: "Run 'df -h', 'free -h', 'uptime'. Report if disk > 80% or memory < 500MB free."
+      deliver: telegram
+      enabled: false
+
+# ── Logging ──
+logging:
+  level: info
