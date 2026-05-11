@@ -35,6 +35,10 @@ If this guide helped you, consider buying me a coffee ☕
 
 [!["Buy Me A Coffee"](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support%20Me-FF813F?logo=ko-fi&logoColor=white)](https://ko-fi.com/koksing1977)
 
+## 🌐 Blog
+
+Read practical guides on self-hosting AI agents and VPS setups → [trevva.io](https://trevva.io)
+
 ## 📖 Premium Edition
 
 A print-ready PDF + DOCX with cover page is available on Gumroad → [koksing.gumroad.com/l/xkrtq](https://koksing.gumroad.com/l/xkrtq) (name your price, $15 suggested).
