@@ -2,6 +2,8 @@
 
 A complete, step-by-step guide to installing, configuring, and running [Hermes Agent](https://hermes-agent.nousresearch.com) — an open-source AI assistant that connects to WeChat, Telegram, and runs on your own hardware.
 
+[!["Buy Me A Coffee"](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support%20Me-FF813F?logo=ko-fi&logoColor=white)](https://ko-fi.com/koksing1977)
+
 ## 📚 Chapters
 
 | # | Chapter |
@@ -27,9 +29,11 @@ hermes setup
 
 Then follow [Chapter 01](ch01.md) for the full setup walkthrough.
 
-## 📦 Bonus Files
+## 💖 Support This Guide
 
-Bonus files (config templates, systemd service, cron recipes) are available in the [premium pack](https://koksing.gumroad.com/l/xkrtq).
+If this guide helped you, consider buying me a coffee ☕
+
+[!["Buy Me A Coffee"](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support%20Me-FF813F?logo=ko-fi&logoColor=white)](https://ko-fi.com/koksing1977)
 
 ## 📖 Premium Edition
 
