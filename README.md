@@ -39,6 +39,9 @@ If this guide helped you, consider buying me a coffee ☕
 
 Read practical guides on self-hosting AI agents and VPS setups → [trevva.io](https://trevva.io)
 
-## 📖 Premium Edition
+## 🛒 Also Available
 
-A print-ready PDF + DOCX with cover page is available on Gumroad → [koksing.gumroad.com/l/xkrtq](https://koksing.gumroad.com/l/xkrtq) (name your price, $15 suggested).
+| Product | Price | Link |
+|---|---|---|
+| 📖 Full Guide (PDF + DOCX) | Name your price ($15 suggested) | [koksing.gumroad.com/l/xkrtq](https://koksing.gumroad.com/l/xkrtq) |
+| ⚙️ Config Preset Pack (YAML + systemd + 8 cron recipes) | $5 | [koksing.gumroad.com/l/phkka](https://koksing.gumroad.com/l/phkka) |
