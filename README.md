@@ -39,6 +39,10 @@ If this guide helped you, consider buying me a coffee ☕
 
 Read practical guides on self-hosting AI agents and VPS setups → [trevva.io](https://trevva.io)
 
+## 🎁 Get $200 Free DigitalOcean Credit
+
+New to DigitalOcean? Use my referral link to get **$200 free credit** for 60 days → [Sign up here](https://m.do.co/c/e6036a5ad9a2)
+
 ## 🛒 Also Available
 
 | Product | Price | Link |
