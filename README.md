@@ -3,6 +3,8 @@
 A complete, step-by-step guide to installing, configuring, and running [Hermes Agent](https://hermes-agent.nousresearch.com) — an open-source AI assistant that connects to WeChat, Telegram, and runs on your own hardware.
 
 [!["Buy Me A Coffee"](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support%20Me-FF813F?logo=ko-fi&logoColor=white)](https://ko-fi.com/koksing1977)
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=e6036a5ad9a2&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+
 
 ## 📚 Chapters
 
